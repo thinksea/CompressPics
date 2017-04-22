@@ -14,7 +14,8 @@
                 System.Drawing.Imaging.PixelFormat.Format16bppArgb1555,
                 System.Drawing.Imaging.PixelFormat.Format1bppIndexed,
                 System.Drawing.Imaging.PixelFormat.Format4bppIndexed,
-                System.Drawing.Imaging.PixelFormat.Format8bppIndexed
+                System.Drawing.Imaging.PixelFormat.Format8bppIndexed,
+                (System.Drawing.Imaging.PixelFormat)8207
             };
 
         /// <summary>
