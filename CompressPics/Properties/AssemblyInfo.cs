@@ -17,7 +17,7 @@ Thinksea：http://www.thinksea.com
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Thinksea")]
 [assembly: AssemblyProduct("Thinksea Compress Pictures")]
-[assembly: AssemblyCopyright("(C) 2012-2015 Thinksea 保留所有权利。")]
+[assembly: AssemblyCopyright("(C) 2012-2017 Thinksea 保留所有权利。")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -39,5 +39,5 @@ Thinksea：http://www.thinksea.com
 // 可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值，
 // 方法是按如下所示使用“*”:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.2.0.0")]
-[assembly: AssemblyFileVersion("1.2.0.0")]
+[assembly: AssemblyVersion("1.2.1.0")]
+[assembly: AssemblyFileVersion("1.2.1.0")]
