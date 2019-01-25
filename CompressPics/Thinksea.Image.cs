@@ -3,7 +3,7 @@
     /// <summary>
     /// 封装了图像处理方法。
     /// </summary>
-    public class Image
+    public static class Image
     {
         /// <summary>
         /// 会产生graphics异常的PixelFormat（一般提示为“无法从带有索引像素格式的图像创建 Graphics 对象。”）
@@ -267,6 +267,19 @@
                             //System.Drawing.Graphics g = System.Drawing.Graphics.FromImage(bitmap);
                             //g.DrawImage(image, 0, 0, bitmap.Width, bitmap.Height);
 
+                            bitmap.SetResolution((image.HorizontalResolution > 96.0F ? 96.0F : image.HorizontalResolution), (image.VerticalResolution > 96.0F ? 96.0F : image.VerticalResolution));
+                            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
+                            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.Low;
+                            g.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.Default;
+                        }
+                        break;
+                    case Thinksea.eImageQuality.Web:
+                        {
+                            //System.Drawing.Bitmap bitmap = new System.Drawing.Bitmap(System.Convert.ToInt32(ImageRectangleF.Width == 0 ? 1 : ImageRectangleF.Width), System.Convert.ToInt32(ImageRectangleF.Height == 0 ? 1 : ImageRectangleF.Height));
+                            //System.Drawing.Graphics g = System.Drawing.Graphics.FromImage(bitmap);
+                            //g.DrawImage(image, 0, 0, bitmap.Width, bitmap.Height);
+
+                            bitmap.SetResolution((image.HorizontalResolution > 72.0F ? 72.0F : image.HorizontalResolution), (image.VerticalResolution > 72.0F ? 72.0F : image.VerticalResolution));
                             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
                             g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.Low;
                             g.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.Default;
@@ -529,6 +542,10 @@
         /// 低质量。
         /// </summary>
         Low,
+        /// <summary>
+        /// Web 质量。
+        /// </summary>
+        Web,
     }
 
 }

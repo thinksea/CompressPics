@@ -197,12 +197,13 @@ namespace CompressPics
             }
 
             {
-                this.输出图片质量s.Add(new KeyValuePair<string, Thinksea.eImageQuality>("高", Thinksea.eImageQuality.High));
-                this.输出图片质量s.Add(new KeyValuePair<string, Thinksea.eImageQuality>("低", Thinksea.eImageQuality.Low));
+                this.输出图片质量s.Add(new KeyValuePair<string, Thinksea.eImageQuality>("高 (原始分辨率)", Thinksea.eImageQuality.High));
+                this.输出图片质量s.Add(new KeyValuePair<string, Thinksea.eImageQuality>("低 (96 dpi)", Thinksea.eImageQuality.Low));
+                this.输出图片质量s.Add(new KeyValuePair<string, Thinksea.eImageQuality>("Web (72 dpi)", Thinksea.eImageQuality.Web));
                 this.cmb输出图片质量.DisplayMember = "Key";
                 this.cmb输出图片质量.ValueMember = "Value";
                 this.cmb输出图片质量.DataSource = this.输出图片质量s;
-                this.cmb输出图片质量.SelectedValue = Thinksea.eImageQuality.Low;
+                this.cmb输出图片质量.SelectedValue = Thinksea.eImageQuality.Web;
             }
 
             {
@@ -547,7 +548,8 @@ namespace CompressPics
                 bool 保持小图尺寸 = (bool)this.GetPropertyValue(this.cb保持小图尺寸, "Checked");
                 bool 转换为统一格式 = (bool)this.GetPropertyValue(this.cb转换为统一格式, "Checked");
                 Thinksea.eImageQuality 图片质量 = (Thinksea.eImageQuality)this.GetPropertyValue(this.cmb输出图片质量, "SelectedValue");
-                System.Drawing.Imaging.ImageFormat 统一文件格式 = (System.Drawing.Imaging.ImageFormat)this.GetPropertyValue(this.cmb存盘格式, "SelectedValue");
+                ImageFormat 选中的统一格式 = (ImageFormat)this.GetPropertyValue(this.cmb存盘格式, "SelectedItem");
+
                 int maxWidth = 0;
                 if ((bool)this.GetPropertyValue(this.cb最大宽度, "Checked"))
                 {
@@ -578,7 +580,8 @@ namespace CompressPics
                         imageFormat = bmp.RawFormat;
                         if (转换为统一格式)
                         {
-                            imageFormat = 统一文件格式;
+                            imageFormat = 选中的统一格式.Format;
+                            outputFile = System.IO.Path.ChangeExtension(outputFile, 选中的统一格式.Extension);
                         }
                         else
                         {
@@ -620,7 +623,7 @@ namespace CompressPics
                     //                    System.IO.File.Move(outputTempFile, outputFile);
                     System.IO.FileInfo fiSource = new System.IO.FileInfo(file);
                     System.IO.FileInfo fiOutputFile = new System.IO.FileInfo(outputFile);
-                    if (outputTempFileStream.Length < fiSource.Length) //如果可以压缩的更小则保留压缩后的文件。
+                    if (outputTempFileStream.Length < fiSource.Length || fiSource.Extension.ToLower() != fiOutputFile.Extension.ToLower()) //如果可以压缩的更小或者输出文件类型不同，则保留压缩后的文件。
                     {
                         string outputTempFile = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(outputFile), System.Guid.NewGuid().ToString("N"));
                         System.IO.File.WriteAllBytes(outputTempFile, outputTempFileStream.ToArray()); //输出到临时文件。
@@ -636,7 +639,7 @@ namespace CompressPics
                     }
                     else
                     {
-                        if (fiSource.FullName != fiOutputFile.FullName) //如果原始文件与目标文件名称不同则直接改名，否则保留原始文件即可。
+                        if (fiSource.FullName.ToLower() != fiOutputFile.FullName.ToLower()) //如果原始文件与目标文件名称不同则直接改名，否则保留原始文件即可。
                         {
                             //fiTemp.Delete();
                             //fiSource.CopyTo(outputTempFile);

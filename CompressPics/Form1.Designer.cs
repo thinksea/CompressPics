@@ -104,7 +104,7 @@
             this.listView待处理文件.FullRowSelect = true;
             this.listView待处理文件.Location = new System.Drawing.Point(3, 27);
             this.listView待处理文件.Name = "listView待处理文件";
-            this.listView待处理文件.Size = new System.Drawing.Size(442, 264);
+            this.listView待处理文件.Size = new System.Drawing.Size(476, 264);
             this.listView待处理文件.TabIndex = 3;
             this.listView待处理文件.UseCompatibleStateImageBehavior = false;
             this.listView待处理文件.View = System.Windows.Forms.View.Details;
@@ -163,7 +163,7 @@
             this.gp调整大小.Dock = System.Windows.Forms.DockStyle.Top;
             this.gp调整大小.Location = new System.Drawing.Point(0, 62);
             this.gp调整大小.Name = "gp调整大小";
-            this.gp调整大小.Size = new System.Drawing.Size(241, 98);
+            this.gp调整大小.Size = new System.Drawing.Size(288, 98);
             this.gp调整大小.TabIndex = 3;
             this.gp调整大小.TabStop = false;
             this.gp调整大小.Text = "调整尺寸";
@@ -294,7 +294,7 @@
             this.cmb存盘格式.FormattingEnabled = true;
             this.cmb存盘格式.Location = new System.Drawing.Point(123, 3);
             this.cmb存盘格式.Name = "cmb存盘格式";
-            this.cmb存盘格式.Size = new System.Drawing.Size(111, 20);
+            this.cmb存盘格式.Size = new System.Drawing.Size(158, 20);
             this.cmb存盘格式.TabIndex = 1;
             // 
             // toolStrip1
@@ -307,7 +307,7 @@
             this.toolStripButton退出});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(703, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(784, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -366,7 +366,7 @@
             this.toolStripProgressBar1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 446);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(703, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(784, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -386,7 +386,7 @@
             // toolStripStatusLabel正在处理的文件
             // 
             this.toolStripStatusLabel正在处理的文件.Name = "toolStripStatusLabel正在处理的文件";
-            this.toolStripStatusLabel正在处理的文件.Size = new System.Drawing.Size(393, 17);
+            this.toolStripStatusLabel正在处理的文件.Size = new System.Drawing.Size(474, 17);
             this.toolStripStatusLabel正在处理的文件.Spring = true;
             this.toolStripStatusLabel正在处理的文件.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -419,8 +419,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.pic预览);
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
             this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.splitContainer1.Size = new System.Drawing.Size(703, 421);
-            this.splitContainer1.SplitterDistance = 448;
+            this.splitContainer1.Size = new System.Drawing.Size(784, 421);
+            this.splitContainer1.SplitterDistance = 482;
             this.splitContainer1.TabIndex = 1;
             // 
             // splitContainer2
@@ -443,7 +443,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.btn清空日志);
             this.splitContainer2.Panel2.Controls.Add(this.label3);
             this.splitContainer2.Panel2.Controls.Add(this.richTextBox1);
-            this.splitContainer2.Size = new System.Drawing.Size(448, 421);
+            this.splitContainer2.Size = new System.Drawing.Size(482, 421);
             this.splitContainer2.SplitterDistance = 294;
             this.splitContainer2.TabIndex = 4;
             // 
@@ -452,7 +452,7 @@
             this.btn缩略图.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn缩略图.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn缩略图.Image = global::CompressPics.Properties.Resources.largeicon;
-            this.btn缩略图.Location = new System.Drawing.Point(404, 5);
+            this.btn缩略图.Location = new System.Drawing.Point(438, 5);
             this.btn缩略图.Name = "btn缩略图";
             this.btn缩略图.Size = new System.Drawing.Size(21, 21);
             this.btn缩略图.TabIndex = 1;
@@ -466,7 +466,7 @@
             this.btn列表.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn列表.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn列表.Image = global::CompressPics.Properties.Resources.details;
-            this.btn列表.Location = new System.Drawing.Point(424, 5);
+            this.btn列表.Location = new System.Drawing.Point(458, 5);
             this.btn列表.Name = "btn列表";
             this.btn列表.Size = new System.Drawing.Size(21, 21);
             this.btn列表.TabIndex = 2;
@@ -514,7 +514,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Location = new System.Drawing.Point(3, 24);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(442, 94);
+            this.richTextBox1.Size = new System.Drawing.Size(476, 94);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
@@ -525,7 +525,7 @@
             this.pic预览.InitialImage = global::CompressPics.Properties.Resources.loading;
             this.pic预览.Location = new System.Drawing.Point(5, 5);
             this.pic预览.Name = "pic预览";
-            this.pic预览.Size = new System.Drawing.Size(241, 249);
+            this.pic预览.Size = new System.Drawing.Size(288, 249);
             this.pic预览.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic预览.TabIndex = 1;
             this.pic预览.TabStop = false;
@@ -538,7 +538,7 @@
             this.panel2.Location = new System.Drawing.Point(5, 254);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(241, 162);
+            this.panel2.Size = new System.Drawing.Size(288, 162);
             this.panel2.TabIndex = 22;
             // 
             // panel3
@@ -550,7 +550,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(241, 57);
+            this.panel3.Size = new System.Drawing.Size(288, 57);
             this.panel3.TabIndex = 2;
             // 
             // cmb输出图片质量
@@ -561,7 +561,7 @@
             this.cmb输出图片质量.FormattingEnabled = true;
             this.cmb输出图片质量.Location = new System.Drawing.Point(123, 29);
             this.cmb输出图片质量.Name = "cmb输出图片质量";
-            this.cmb输出图片质量.Size = new System.Drawing.Size(111, 20);
+            this.cmb输出图片质量.Size = new System.Drawing.Size(158, 20);
             this.cmb输出图片质量.TabIndex = 3;
             // 
             // label2
@@ -586,11 +586,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 468);
+            this.ClientSize = new System.Drawing.Size(784, 468);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
-            this.MinimumSize = new System.Drawing.Size(719, 506);
+            this.MinimumSize = new System.Drawing.Size(800, 507);
             this.Name = "Form1";
             this.Text = "Thinksea Compress Pictures";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
